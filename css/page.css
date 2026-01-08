@@ -189,6 +189,11 @@ a:active {
           color: #fff;
           border-radius: 30px;
           display: inline-block; }
+          .site-navbar .site-navigation .site-menu > li > a:active > span {
+          background: #e0d693;
+          color: #fff;
+          border-radius: 30px;
+          display: inline-block; }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a span {
