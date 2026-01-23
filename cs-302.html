@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/page.css">
 
     <!-- Favicon -->
-    <title>About</title>
+    <title>CS 302</title>
     <link href="img/favicon.png" rel="icon">
 </head>
 
@@ -67,39 +67,101 @@
     <div class="under-header" style="padding-top: 158px;"></div>
 
     <div class="text-container">
-        <div class="row">
-            <div class="col-sm-1"></div>
+        <div class="row justify-content-center">
             <div class="col-sm-10" style="text-align: center;">
                 <h1>CS 302: The Why Behind Everyday Technologies</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10 topic-nav-302" style="text-align: center;">
+                <h3>Topic Navigation</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center topic-nav-302">
+            <div class="col-sm-3" style="text-align: center;">
+                <a href="#diglogic" style="font-size: 19px; font-weight: 600;">Digital Logic x Metaphysics</a>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+                <a href="#genai" style="font-size: 19px; font-weight: 600;">GenAI x Epistemology</a>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+                <a href="#social-ethics" style="font-size: 19px; font-weight: 600;">Social Media x Ethics</a>
+            </div>
+        </div>
+    </div>
 
-                <!-- Add a navigation bar here that links onto the specfic part of the page -->
-                <h3>Digital Logic x Metaphysics</h3>
+    <div class="text-container">
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="text-align: center;">
+                <h3 id="diglogic">Digital Logic x Metaphysics</h3>
             </div>
         </div>
 
-        <!-- Consider adding images of truth tables for each full binary calculator?? -->
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-5 metaphysics">
-                <h6>Justification and explanation of adder.</h6>
+        <div class="row justify-content-center">
+            <div class="metaphysics col-sm-5">
+                <h6>TEXT HERE</h6>
             </div>
-            <div class="metaphysics col-sm-5 d-flex justify-content-center">
-                <img class="headshot" src="img/adder.png" alt="Circuit diagram of a binary full adder.">
+            <div class="metaphysics col-sm-5">
+                <div class="slideshow-container">
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">1 / 6</div>
+                        <img src="img/adder.png" alt="Diagram of a full adder circuit for binary addition.">
+                    </div>
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">2 / 6</div>
+                        <img src="img/truth-add.png" alt="Truth table of a full adder for binary addition.">
+                    </div>
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">3 / 6</div>
+                        <img src="img/adder-block.png" alt="Block diagram of a complete binary addition circuit.">
+                    </div>
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">4 / 6</div>
+                        <img src="img/subtractor.png" alt="Diagram of a full subtractor circuit for binary subtraction.">
+                    </div>
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">5 / 6</div>
+                        <img src="img/truth-sub.png" alt="Truth table of a full subtractor for binary subtraction.">
+                    </div>
+                    <div class="slide-item slide-fade">
+                        <div class="slide-number">6 / 6</div>
+                        <img src="img/subtractor-block.png" alt="Block diagram of a complete binary subtraction circuit.">
+                    </div>
+                    <a class="slide-prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="slide-next" onclick="plusSlides(1)">❯</a>
+                    
+                </div>
+
+                <br>
+
+                <div style="text-align:center">
+                    <span class="slide-dot" onclick="currentSlide(1)"></span>
+                    <span class="slide-dot" onclick="currentSlide(2)"></span>
+                    <span class="slide-dot" onclick="currentSlide(3)"></span>
+                    <span class="slide-dot" onclick="currentSlide(4)"></span>
+                    <span class="slide-dot" onclick="currentSlide(5)"></span>
+                    <span class="slide-dot" onclick="currentSlide(6)"></span>
+                </div>
+
+                <script src="js/image-gallery.js"></script>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="metaphysics col-sm-5 d-flex justify-content-center">
-                <img class="headshot" src="img/subtractor.png" altsubt="Circuit diagram of a binary full subtractor.">
-            </div>
-            <div class="col-sm-5 metaphysics">
-                <h6>Justification and explanation of subtractor.</h6>
+    </div>
+
+    <div class="text-container">
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="text-align: center;">
+                <h3 id="genai">GenAI x Epistemology</h3>
+                <h6>Stay tuned. More to come soon!</h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10 metaphysics">
-                <h6>Deconstruction here.</h6>
+    </div>
+
+    <div class="text-container">
+        <div class="row justify-content-center">
+            <div class="col-sm-10" style="text-align: center;">
+                <h3 id="social-ethics">Social Media x Ethics</h3>
+                <h6>Stay tuned. More to come soon!</h6>
             </div>
         </div>
     </div>
