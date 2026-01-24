@@ -452,9 +452,9 @@ a:active {
         .site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
           padding-left: 15px !important; }
 
-/* Slideshow capability retrieved from: https://www.w3schools.com/howto/howto_js_slideshow.asp           */
-/* SLIDESHOW */
 
+/* Slideshow capability retrieved from: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+/* SLIDESHOW */
 .slideshow-container {
   width: 100%;
   max-width: 100%;

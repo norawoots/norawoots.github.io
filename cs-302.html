@@ -99,9 +99,27 @@
 
         <div class="row justify-content-center">
             <div class="metaphysics col-sm-5">
-                <h6>TEXT HERE</h6>
+                <h6>
+                    The two-bit addition calculator implements a series of evaluations in the form 
+                    of a half and full adder to successfully output correct results in binary from 
+                    two two-bit binary inputs. Like decimal addition, each two-bit input is broken 
+                    into individual bits from right to left. The half adder takes in the right most 
+                    input bit and evaluates if a carry is necessary (using the AND gate). If a carry 
+                    is necessary, it sends the carry to the full adder, and sends the sum (output 
+                    from the XOR gate) to the first output bit (rightmost). Then, the full adder 
+                    evaluates the carry and the next two input bits (via a series of XOR and AND gates). 
+                    The sum output goes to the second output bit (XOR gate output). If a carry is necessary 
+                    in the full adder (evaluated from another AND gate), the carry is sent to the third 
+                    output bit (leftmost).
+                </h6>
+                <h6>
+                    For an example tracing, consider the following inputs: X = 11 and Y = 01. Then, breaking 
+                    these inputs bit by bit, we find X<sub>0</sub> = 1, X<sub>1</sub> = 1, Y<sub>0</sub> = 1, 
+                    and Y<sub>1</sub> = 0.
+                </h6>
             </div>
             <div class="metaphysics col-sm-5">
+                <!-- Slideshow capability retrieved from: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
                 <div class="slideshow-container">
                     <div class="slide-item slide-fade">
                         <div class="slide-number">1 / 6</div>
@@ -144,6 +162,97 @@
                 </div>
 
                 <script src="js/image-gallery.js"></script>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <h6>
+                    We send X<sub>0</sub> = 1 and Y<sub>0</sub> = 1 to the half adder. By the truth table, 
+                    we see that two inputs of 1 necessitate a carry of 1 and an output sum (S<sub>0</sub>) of 0. 
+                    Then, 0 is sent to the first output (S<sub>0</sub>) and 1 is sent to the carry-in in the full 
+                    adder (C<sub>0</sub>). Next, the full adder takes in the inputs X<sub>1</sub> = 1 and 
+                    Y<sub>1</sub> = 0. The two inputs are evaluated, and we find that a carry bit is not necessary, 
+                    the output from the XOR gate is 1. Then, the carry-in (C<sub>0</sub>) is evaluated with the 
+                    output from the XOR evaluation. The inputs to the XOR gate are 1 and 1 so the output sum 
+                    (S<sub>1</sub>) is 0, which is sent to the second output bit. The same inputs are also sent to 
+                    the AND gate for evaluation, which yields a carry-out of 1 sent to the third output bit (C<sub>1</sub>).
+                    Thus the output is 100.
+                </h6>
+                <h6>
+                    The two-bit subtraction calculator works similarly to the addition calculator to also successfully output 
+                    correct results in binary from two two-bit binary inputs. Note that this implementation of the subtractor 
+                    does not account for negative numbers. But, like the adder, the subtractor implements a successive series 
+                    of gates (in the form of a half and full adder) that evaluate bits from the input.
+                </h6>
+                <h6>
+                    For an example tracing, consider the following inputs: X = 10 and Y = 01. Then, breaking these inputs bit by bit, 
+                    we find X<sub>0</sub> = 0, X<sub>1</sub> = 1, Y<sub>0</sub> = 1, and Y<sub>1</sub> = 0. We send X<sub>0</sub> = 0 
+                    and Y<sub>0</sub> = 1 to the half subtractor. By the truth table, we see that these inputs necessitate a borrow of 
+                    1 (B<sub>0</sub> = 1) and an output difference (D<sub>0</sub>) of 1, which is sent to the first output. Thus, 
+                    B<sub>0</sub> = 1 is sent to the full subtractor, along with inputs X<sub>1</sub> = 1 and Y<sub>1</sub> = 0. 
+                    Using the XOR gate, we see that the output difference from X<sub>1</sub> and Y<sub>1</sub> is 1, which is sent 
+                    through the NOT to the AND gate to be evaluated with the borrow in bit. The two values of 1 become a 0 and 1 and 
+                    produce a 0 from the AND gate, demonstrating that another borrow is not necessary and that the second output 
+                    difference (D<sub>1</sub>) is 0. Thus, the output is 01.
+                </h6>
+                <h6>
+                    Upon building these circuits, we began to consider the point at which our design became a computer, and more broadly, 
+                    what generally defined a computer. During class discussions, we generated questions to unpack, including: “Is a broken 
+                    computer still a computer?”, “Would computers/computation exist without humans?”, and “Does a computer need to be a physical object?”. 
+                </h6>
+                <h6>
+                    Prior to these discussions, I think that I primarily viewed computers in the conversational way: a laptop, maybe a phone if we're stretching 
+                    things, that has varied and advanced technological capabilities. I never considered that a computer might be a crab maze (Gunji, Nishiyama, 
+                    Adamatzky, 2012) or a 2,000 year old unearthed pulley system (Dewdney, 1988), or that it could implement a living organism as hardware (Lu, 
+                    Lopes, 2022). 
+                </h6>
+                <h6>
+                    In fact, not only did the pre-class readings broaden my perspective on what might constitute a “computer”, it was from these pre-class 
+                    readings that I began to develop my own formal working definition, an understanding that was echoed in our class discussions. I found 
+                    our final reading about an ancient rope-and-pulley computer to be the most impactful in shaping my new opinion. Dewdney (1988) 
+                    states that “any modern computer (and its program) is conceptually translatable into Apraphulian form,” (121). The Apraphulian 
+                    form in question is a series of logical gates built from pulleys and wood that act on a rope input. These boxes and ropes store 
+                    the output values as marbles in specific holes in a binary-esque arrangement. Based on this interpretation, I have come to understand 
+                    that our modern computers are a set of logical rules that accept and act on an input to produce an output, often including a technical 
+                    and/or mathematical element.
+                </h6>
+                <h6>
+                    However, what most intrigued me about our class exchanges was quantifying the necessity of human involvement in computing and 
+                    computers. I can not attribute any one comment to one of my classmates, however, thematically, these 
+                    discussions centered on the semantics of language, the concept of existence with and without 
+                    observation, and edge cases of computing. One conclusion that we seemed to all share was that 
+                    the formalized language and symbol expression of computation is human. But, we also agreed that 
+                    this standardized language was developed by humans to communicate about concepts and natural 
+                    occurrences that exist without humans. As such, the physical manifestations of what we are expressing 
+                    and trying to understand through computation (i.e. projectile motion, weather patterns, etc.) preserve 
+                    their mathematical or computational relationship with or without observation. Humans imposing their 
+                    calculations onto things that exhibit mathematical patterns does not make those occurrences dependent 
+                    on human calculation. But, the standard expression of calculation that we have developed does necessitate 
+                    human involvement. 
+                </h6>
+                <h6>
+                    Though, after this deconstruction week, I am still wondering about considering natural phenomena 
+                    as computers themselves, and in particular incorporating these natural elements into the “technological” 
+                    elements that we conversationally consider to be “computers.”
+                </h6>
+                <h6><strong>Citations:</strong></h6>
+                <h6>
+                    Dewdney, A. K. (2024, February 20). Computer recreations, April 1988. 
+                    <i>Scientific American</i>. 
+                    <a href="https://www.scientificamerican.com/article/computer-recreations-1988-04/">https://www.scientificamerican.com/article/computer-recreations-1988-04/</a>
+                </h6>
+                <h6>
+                    Gunji, Y., Nishiyama, Y., &amp; Adamatzky, A. (2012, April 8). <i>Robust soldier crab ball gate.</i> 
+                    arXiv.
+                    <a href="https://arxiv.org/abs/1204.1749">https://arxiv.org/abs/1204.1749</a>
+                </h6>
+                <h6>
+                    <i>Integrating living organisms in devices to implement care-based interactions.</i> (2025, January 10). 
+                    The Institute for Climate and Sustainable Growth. 
+                    <a href="https://climate.uchicago.edu/working-papers/integrating-living-organisms-in-devices-to-implement-care-based-interactions/">
+                    https://climate.uchicago.edu/working-papers/integrating-living-organisms-in-devices-to-implement-care-based-interactions/
+                    </a>
+                </h6>
             </div>
         </div>
     </div>
