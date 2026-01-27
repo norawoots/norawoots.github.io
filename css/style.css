@@ -158,7 +158,9 @@ a:active {
     width: 100%; }
   .site-navbar .site-logo {
     position: relative;
+    z-index: 2;
     left: 0;
+    white-space: nowrap;
     font-size: 36px !important; }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
@@ -288,10 +290,6 @@ a:active {
           margin-top: 0px;
           visibility: visible;
           opacity: 1; }
-
-.site-logo a {
-  white-space: nowrap; /* Prevent the logo text from wrapping */
-}
 
 .site-mobile-menu {
   width: 300px;
