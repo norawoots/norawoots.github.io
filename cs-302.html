@@ -48,6 +48,7 @@
                                 <li><a href="musc-205.html">MUSC 205</a></li>
                             </ul>
                         </li>
+                        <li><a href="recent-media.html"><span>Recent Media</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -79,14 +80,17 @@
             </div>
         </div>
         <div class="row justify-content-center topic-nav-302">
-            <div class="col-sm-3" style="text-align: center;">
-                <a href="#diglogic" style="font-size: 19px; font-weight: 600;">Digital Logic x Metaphysics</a>
+            <div class="col-sm-2" style="text-align: center;">
+                <a href="#diglogic" style="font-size: 21px; font-weight: 600;">Digital Logic x Metaphysics</a>
             </div>
-            <div class="col-sm-3" style="text-align: center;">
-                <a href="#genai" style="font-size: 19px; font-weight: 600;">GenAI x Epistemology</a>
+            <div class="col-sm-2" style="text-align: center;">
+                <a href="#genai" style="font-size: 21px; font-weight: 600;">GenAI x Epistemology</a>
             </div>
-            <div class="col-sm-3" style="text-align: center;">
-                <a href="#social-ethics" style="font-size: 19px; font-weight: 600;">Social Media x Ethics</a>
+            <div class="col-sm-2" style="text-align: center;">
+                <a href="#social-ethics" style="font-size: 21px; font-weight: 600;">Social Media x Ethics</a>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <a href="#final-project" style="font-size: 21px; font-weight: 600;">Final: Tinder x Metaphysics</a>
             </div>
         </div>
     </div>
@@ -406,9 +410,104 @@
         <div class="row justify-content-center">
             <div class="col-sm-10" style="text-align: center;">
                 <h3 id="social-ethics">Social Media x Ethics</h3>
-                <h6>Stay tuned. More to come soon!</h6>
             </div>
         </div>
+        <div class="row justify-content-center" style="padding-top: 1.5vh;">
+            <a href="https://bsky.app/profile/cs302-woots.bsky.social" target="_blank" style="font-size: 19px; font-weight: 600;">View The Bluesky Bot</a>
+        </div>
+        <div class="row justify-content-center" style="padding-bottom: 3vh;">
+            <div class="col-sm-4" style="padding-top: 1.5vh;">
+                <img width="100%" style="margin-top: 1vh" src="img/bluesky_img.png" alt="Bluesky Bot image post">
+                <h5>Bluesky Bot image post.</h5>
+                <img width="100%" style="margin-top: 1vh" src="img/bluesky_text.png" alt="Bluesky Bot text post, also featuring an additonal package">
+                <h5>Bluesky Bot text post, also featuring the implementation of an additonal package.</h5>
+                <img width="100%" style="margin-top: 1vh" src="img/bluesky_like.png" alt="Bluesky Bot liking another users' post">
+                <h5>Bluesky Bot liking another user's post.</h5>
+            </div>
+            <div class="col-sm-6" style="padding-top: 1.5vh;">
+                <div class="row justify-content-center">
+                    <h4>Construction</h4>
+                </div>
+                <div class="row justify-content-center">
+                    <h6>To actualize the Bluesky Bot, it was necessary to implement a few different 
+                        kinds of posts. These posts included a text post, a multimedia post, a post 
+                        that implemented some sort of imported external package, and some method of 
+                        interacting with another user's post. To create each kind of post, I accessed 
+                        the <a href="https://github.com/MarshalX/atproto/tree/main/examples" target="_blank">atproto 
+                            repo</a> on GitHub and modified the existing code provided there based on 
+                            the specifications for my bot.</h6>
+
+                    <h6>To implement a <strong>text post</strong>, I wanted to draw on the classic 
+                        computer science gimmick of an introductory print statement displaying 
+                        “Hello World!”. As such, for the most simplistic implementation of my text 
+                        post, my bot posts a hello world post. However, my bot also posts another 
+                        form of text post that also implements an <strong>external package</strong>. I 
+                        imported <a href="https://pypi.org/project/pyquotegen/" target="_blank">pyquotegen</a>, which 
+                        is a python package, but is an external package that is not implemented as one 
+                        of python's built in libraries. This package generates a random quote, which 
+                        my bot posts as an additional text post.</h6>
+
+                    <h6>Next, implement a <strong>multimedia post</strong> my bot posts an image post 
+                        with a photo that I took of the Adirondacks. It is captioned “The ADK!”. Finally, 
+                        to interact with another user's post, I decided that I wanted my bot to like 
+                        Bluesky's official account post that explains the purpose of the app. I followed 
+                        the instructions on how to pull a URI and DID from an article supplied to us, 
+                        and used the generated URI to link to the post and allow my bot to like it.</h6>
+                </div>
+                <div class="row justify-content-center">
+                    <h4>Deconstruction</h4>
+                </div>
+                <div class="row justify-content-center">
+                    <h6>In our class discussions, we considered the ways in which we engage with social media, 
+                        and the ethical implications of these habits. In particular, we used ethical frameworks 
+                        (such as consequentialism, utilitarianism, etc.) to determine how actions taken on social 
+                        media could be judged as moral. One discussion that stood out to me was if actions taken 
+                        on social media that had some benefit for some people were morally good or bad if they also 
+                        had negative impacts for others. Social media is in some ways a microcosm of the real world, 
+                        in the sense that we had the opportunity to interact with people and engage socially. And 
+                        like the real world, no action can be taken without some sort of impact (positive or negative) 
+                        to others. Judging, or even measuring the exact fallout of an action, is exceedingly difficult. 
+                        There are an incredibly large number of factors that an action may influence, and as such, 
+                        judging the exact impact, and thus deciding the morality of this action, is tricky. But, we 
+                        did say that under a utilitarian framework, we might be able to judge an action as good or 
+                        bad depending on if that immeasurable net impact was judged to be positive or negative. For 
+                        example, like from our Botivist reading, a bot that tries to enact good for some morally good 
+                        political movement might be good if it encourages people to mobilize for that issue (Savage, 
+                        Monroy-Hernandez, Hollerer, 2016).</h6>
+
+                    <h6>However, continuing with the idea that social media reflects the real world, in some notable 
+                        ways it does differ from the real world. We decided that there is some level of inherent 
+                        separation from a real world persona in social media platforms, and that this separation 
+                        can cause people to act in irrational or perhaps unethical ways. Anonymity allows people 
+                        to perform how they never would want to own up to in real life.</h6>
+
+                    <h6>We also discussed whether or not social media was a platform or a product. To have this 
+                        discussion, we decided we needed to define these terms, and we felt that the main 
+                        distinction was the inherent commercialization of a product that a platform might lack, 
+                        and perhaps an individual's ability to opt in to monetization displayed in the application. 
+                        Under this distinction, we felt that social media had become a capitalist product. In this l
+                        ine of thinking, we discussed if bots on social media improved a user's experience. We decided 
+                        that it depended on the way that we viewed social media. As a platform-- that is a space for 
+                        human users to connect-- bots made the platform disingenuous and removed any sense of authentic 
+                        connection that a user could find there. However, under the lens of a capitalist product, bots 
+                        were just another marketing strategy. If users sought to be marketed to, bots shouldn't change 
+                        their experience.</h6>
+
+                    <h6>Finally, a really good point that one of my classmates brought up is that our ability to 
+                        have critical discussions about social media and dissect the ways in which we engaged with 
+                        it were a product of privilege.</h6>
+
+                    <h6><strong>Citations:</strong></h6>
+                        <h6>
+                            Savage, S., Monroy-Hernández, A., &amp; Höllerer, T. (2016). Botivist: Calling Volunteers 
+                            to Action using Online Bots. <em>CSCW '16: Proceedings of the 19th ACM Conference on 
+                            Computer-Supported Cooperative Work &amp; Social Computing</em>, 813-22. 
+                            <a href="https://doi.org/10.1145/2818048.2819985" target="_blank">https://doi.org/10.1145/2818048.2819985</a>
+                        </h6>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-sm-3" style="text-align: center;">
                 <a href="#cs302-top" style="font-size: 19px; font-weight: 600;">Return To Top</a>
@@ -464,6 +563,9 @@
                         </li>
                         <li class="list-inline-item">
                             <a href="coursework.html">Coursework</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="recent-media.html">Recent Media</a>
                         </li>
                     </ul>
                 </div>
