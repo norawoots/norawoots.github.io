@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tinder App</title>
+
+    <link rel="stylesheet" href="tinder/tinder.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#context" class="nav-link">Context</a>
+        <a href="#swiping" class="nav-link">Swiping</a>
+        <a href="#results" class="nav-link">Results</a>
+        <a href="#about" class="nav-link">About</a>
+	</nav>
+
+    <div class="body-container">
+        <section class="home" id="home">
+            <img class="home-background" src="tinder/tinder-img/home-background.jpg">
+            <div class="overlay-title">
+                <h1>Fetch</h1>
+            </div>
+        </section>
+
+        <section class="context" id="context">
+            <div class="context-title">
+                <h1>Context</h1>
+            </div>
+            <div style="padding-bottom: 4vh;"></div>
+            <div class="context-text">
+                <p>Tinder and other dating apps implement swiping funtionality that allows users to select matches or non-matches based only on a right or left swipe respectively.</p>
+                <br>
+                <p>Here, we use a limited interface to partially mimic this functionality for users. 
+                    Except now, instead of selecting romantic matches, we assume the user is a "dog person", and accordingly,
+                    that users prefer dogs over cats. As such, users will only swipe right on dogs,
+                    and only swipe left on cats.
+                </p>
+            </div>
+        </section>
+
+        <section class="swiping" id="swiping">
+            <div style="padding-bottom: 4vh;"></div>
+            <div class="swipe-title">
+                <h1>Go Fetch!</h1>
+            </div>
+            
+            <div class="card-container">
+                <img id="card" class="card" />
+            </div>
+
+            <div style="padding-bottom: 4vh;"></div>
+
+            <button id="swipeButton" class="swipeButton">Swipe</button>
+        </section>
+        
+        <section class="results" id="results">
+            <div style="padding-bottom: 4vh;"></div>
+            <div class="results-title">
+                <h1>Results</h1>
+            </div>
+            <div class="results-row">
+                <div class="labels">
+                    <p><h2>Cats:</h2> <span id="catCount">0</span></p>
+                    <p><h2>Dogs:</h2> <span id="dogCount">0</span></p>
+                    <p><h2>Dog Ratio:</h2> <span id="dogRatio">0%</span></p>
+                    <p><h2>Cat Ratio:</h2> <span id="catRatio">0%</span></p>
+                </div>
+                <div class="pie-container">
+                    <div id="pieChart" class="pie-chart"></div>
+                </div>
+                <div class="labels">
+                    <p><h2>Number of Cats:</h2> Pictured in Yellow</p>
+                    <p><h2>Number of Dogs:</h2> Pictured in Pink</p>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 4vh;"></div>
+
+            <button id="resetButton" class="swipeButton">Reset</button>
+            
+            <div style="padding-bottom: 4vh;"></div>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="about-title">
+                <h1>About</h1>
+            </div>
+            <div class="about-text">
+                <p>The purpose of this prototype is to investigate <strong>variable rate reinforcement</strong> in users.</p>
+                <br>
+                <p>
+                    Variable rate reinforcement is a psychological strategy implemented by dating apps to maintain 
+                    and maximize user engagement on their apps. Assuming that a match is a "reward" for users, rewards are spaced
+                    infrequently and on an unpredictable schedule, called a "partial schedule." This partial schedule reinforces
+                    users to stay on the app while waiting to try and get their next reward. It is very resistant to user disengagement
+                    because of the lack of predictability in the next reward.
+                </p>
+                <br>
+                <p>
+                    Visible in the <a href="#results">results</a> section, the ratio of cats to dogs is highly scewed towards cats, demonstrating that
+                    even though users are seeking to "match" with dogs, they engage with far more cats. However, despite this unfavorable ratio,
+                    users continue to stay engaged on the app due to the intense appeal of <i>eventually</i> finding another reward.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="tinder/tinder-js/nav-script.js"></script>
+    <script src="tinder/tinder-js/swipe-script.js"></script>
+</body>

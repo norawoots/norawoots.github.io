@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+}
+
+
+/* NAVIGATION BAR */
+
+/* Nav Bar */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #61A0AF;
+  display: flex;
+  justify-content: right;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+/* Navbar links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #F9B9B7;
+}
+
+/* Scroll effect */
+.nav-link.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #F5D491;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Active color */
+.nav-link.active {
+  color: #F5D491;
+  border-bottom: 2px solid #96C9DC;
+}
+
+/* Active hover color */
+.nav-link.active:hover {
+  color: #F9B9B7;
+  border-bottom: 2px solid #96C9DC;
+}
+
+/* Change the underline bar color on hover */
+.nav-link.active:hover::after {
+  background-color: #F9B9B7;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* HOME PAGE STYLING */
+
+.home {
+  position: relative;
+  display: inline-block;
+}
+
+.home-background {
+  object-fit: cover;
+  width: 100vw;
+  display: block;
+  height: 100vh;
+}
+
+.overlay-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #96c9dc74;
+  padding: 10px;
+  font-size: 60px;
+  text-align: center;
+}
+
+/* CONTEXT PAGE */
+
+.context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F9B9B7;
+}
+
+.context-title {
+  color: #e47874;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 10vh;
+}
+
+.context-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 4vh;
+  text-align: center;
+  width: 80%;
+}
+
+
+/* SWIPING PAGE */
+
+.swiping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card-container {
+  width: 40vw;
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.swipe-left {
+  transform: translateX(-25vw) rotate(-20deg);
+  opacity: 0;
+}
+
+.swipe-right {
+  transform: translateX(25vw) rotate(20deg);
+  opacity: 0;
+}
+
+.swipe-title {
+  color: #F9B9B7;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 10vh;
+}
+
+.swipeButton {
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  background-color: #e47874;
+  color: #F9B9B7;
+  cursor: pointer;
+}
+
+.swipeButton:hover {
+  background-color: #F9B9B7;
+  color: #e47874;
+}
+
+.swipeButton:active {
+  background-color: #F5D491;
+}
+
+/* RESULTS PAGE */
+
+.results {
+  background-color: #96C9DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.results-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.results-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 4vh;
+  padding-top: 4vh;
+}
+
+.pie-container {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.labels {
+  width: 250px;
+  text-align: center;
+  color: #61A0AF;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  color: white;
+  width: 250px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  display: inline;
+}
+
+/* Pie Chart from https://stackoverflow.com/questions/10028182/how-to-make-a-pie-chart-in-css */
+.pie-chart {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: conic-gradient(#F5D491 0% 50%, #e47874 50% 100%);
+}
+
+
+/* ABOUT PAGE */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F5D491;
+}
+
+.about-title {
+  color: #61A0AF;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 4vh;
+  padding-top: 4vh;
+}
+
+.about-text {
+  color: #e47874;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 4vh;
+  text-align: center;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #96C9DC;
+}
+
+a:active {
+  text-decoration: none;
+  color: #e47874;
+}
