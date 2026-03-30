@@ -107,11 +107,6 @@ h6 {
   color: #d6dbe5;
 }
 
-/* Transform functionality from: https://www.w3schools.com/cssref/css3_pr_transform.php */
-.contact .social-icon:hover {
-  transform: scale(1.2);
-}
-
 .contact ul.list-inline {
   margin: 0;
   padding: 0;

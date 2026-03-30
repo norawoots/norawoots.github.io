@@ -35,7 +35,6 @@ h1, h2, h3, h4, h5, h6,
 h1 {
   font-weight: 600;
   color:#7993ad;
-  margin-bottom: 1.5vw;
 }
 
 h2 {
@@ -77,6 +76,36 @@ h6 {
   align-self: flex-start;
 }
 
+.homepage-button {
+  min-width: 10.2vw;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #7993ad;
+  background: #d6dbe5;
+  color: #7993ad;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.homepage-button:hover {
+  background: #7993ad;
+  color: #343a40;
+  border-color: #343a40;
+  box-shadow: 0 6px 14px rgba(121,147,173,0.35);
+}
+
+.homepage-button:active {
+  transform: translateY(0);
+  outline: none;
+  background: #e0d693;
+  border-color: #7993ad;
+  color: #7993ad;
+}
+
 
 /* FOOTER */
 .construction {
@@ -92,11 +121,6 @@ h6 {
   transition: transform 0.2s ease;
   filter: brightness(0) invert(1);
   color: #d6dbe5;
-}
-
-/* Transform functionality from: https://www.w3schools.com/cssref/css3_pr_transform.php */
-.contact .social-icon:hover {
-  transform: scale(1.2);
 }
 
 .contact ul.list-inline {
