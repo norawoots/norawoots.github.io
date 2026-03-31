@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+small {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 h1 {
   font-weight: 600;
   color:#7993ad;
@@ -89,6 +93,47 @@ h6 {
 
 .topic-nav-302 {
   padding-top: 2vh;
+}
+
+ul li {
+  padding-bottom: 1vh;
+}
+
+ul li.list-no-padding {
+  padding-bottom: 0;
+}
+
+small.clarification {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 1vh;
+  margin-left: 0;
+}
+
+.section h6 {
+  cursor: pointer;
+  color: #7993ad;
+  margin: 0;
+  display: inline-block;
+}
+
+.section h6:hover {
+  color: #516464;
+}
+
+.section h6:active {
+  color: #e0d693;
+}
+
+.content {
+  display: none;
+  border-top: none;
+  padding: 6px 14px;
+}
+
+.content ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
 /* FOOTER */
@@ -284,7 +329,7 @@ a:active {
             padding: 9px 20px;
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-              background: #fafafb; }
+              background: #e9e9ea; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a {
             position: relative; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:after {
@@ -299,7 +344,7 @@ a:active {
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:active > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:focus > a {
             background: #fafafb; }
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
-        color: #7993ad; }
+        color: #7993ad !important; }
         .site-navbar .site-navigation .site-menu .has-children:hover > a span, .site-navbar .site-navigation .site-menu .has-children:focus > a span, .site-navbar .site-navigation .site-menu .has-children:active > a span {
           background: #7993ad;
           color: #fff; }
@@ -312,6 +357,13 @@ a:active {
           margin-top: 0px;
           visibility: visible;
           opacity: 1; }
+        .site-navbar .site-navigation .site-menu .has-children > a:active > span {
+          background: #e0d693;
+          color: #fff;
+        }
+        .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:active {
+          background: #e0d693;
+        }
 
 .site-mobile-menu {
   width: 300px;
